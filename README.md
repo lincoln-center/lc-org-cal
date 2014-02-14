@@ -10,6 +10,8 @@ A 7 column desktop grid breaks down to a list view on mobile and removes all unn
 
 ## Build Notes
 
+* Fonts.com/MAMP: use domain: lc-org-cal.dev
+
 * Using the Bourbon Neat grid framework along with Bourbon and Hammer
 
 * Assumes some javascript magic will be applied later
