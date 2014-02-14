@@ -32,6 +32,7 @@ header
 $black: #454545
 $gray: #F2F2F2
 $lc-blue: #00acd4
+$lc-accent-blue: #e3f3f3
 
 $dates-border-radius: 5px
 
@@ -109,18 +110,20 @@ header
 		border-left: 0 //removes col. stroke: makes flush with window
 
 .genre
+	+univers 
 	font-size: .8em
 	margin-left: 1.3em
 	line-height: 1.6em
 	padding-left: 1.3em
-	background: #ccc
+	background: $lc-accent-blue
 	margin-top: 1.5em
 	margin-bottom: 1em
 
 .events
+	+univers-light 
 	font-size: .8em
 	margin-left: 1.3em
-	line-height: 1.6em
+	line-height: 2em
 
 .days
 	@include pad(1em 0 1em 1em)
