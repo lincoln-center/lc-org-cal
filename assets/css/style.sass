@@ -9,6 +9,7 @@
 	@include outer-container
 
 .days,
+.ghost-column,
 .nav-slug,
 .days-label--day
 	@include span-columns(1)
@@ -16,7 +17,8 @@
 		@include span-columns(1)
 
 .weeks,
-.days-label
+.days-label,
+.ghost-columns
 	@include row()
 
 header
@@ -80,6 +82,18 @@ header
 
 .cal-container
 	@include clearfix
+
+.ghost-columns //adds faux cols to allow for equal height strokes
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	z-index: -1
+
+.ghost-column 
+	height: 100%
+	background: #ccc
 
 .weeks 
 	position: relative 
