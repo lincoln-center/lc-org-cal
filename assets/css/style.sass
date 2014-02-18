@@ -9,6 +9,7 @@
 	@include outer-container
 
 .days,
+.cal-stroke,
 .nav-slug,
 .days-label--day
 	@include span-columns(1)
@@ -16,7 +17,8 @@
 		@include span-columns(1)
 
 .weeks,
-.days-label
+.days-label,
+.cal-strokes
 	@include row()
 
 header
@@ -70,6 +72,7 @@ p
 //------------------------------------//
 
 .container
+	position: relative //allows faux cols to expand full height with pos absolute
 	border-top: 6px solid $black
 	margin-top: 5em
 
@@ -80,6 +83,20 @@ header
 
 .cal-container
 	@include clearfix
+
+.cal-strokes //adds faux cols to allow for equal height strokes
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	z-index: -1
+
+.cal-stroke  
+	height: 100%
+	border-left: 1px solid #ccc
+	&:first-child
+		border-left: 0 //removes col. stroke: makes flush with window
 
 .weeks 
 	position: relative 
@@ -137,13 +154,9 @@ header
 	//margin-top: 1em
 	padding: 1em 0
 	min-height: 3.5em
-	border-left: 1px solid #ccc
-	&:first-child
-		border-left: 0 //removes col. stroke: makes flush with window
 
 .day-null //extends height of null days to match vert rule to others
 	min-height: 87px
-
 
 .dates
 	padding: .5em 1em .5em 1em
