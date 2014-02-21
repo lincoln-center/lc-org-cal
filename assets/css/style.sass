@@ -8,21 +8,26 @@
 .container
 	@include outer-container
 
+.header
+	@include span-columns(7)
+
+.cal-container
+	@include span-columns(7)
+
 .days,
 .cal-stroke,
-.nav-slug,
 .days-label--day
-	@include span-columns(1)
+	@include span-columns(1 of 7)
 	@include media($mobile)
 		@include span-columns(1)
 
+.cal-container,
+header,
 .weeks,
 .days-label,
 .cal-strokes
 	@include row()
 
-header
-	@include span-columns(7)
 
 
 //------------------------------------//
@@ -73,8 +78,9 @@ p
 
 .container
 	position: relative //allows faux cols to expand full height with pos absolute
-	border-top: 6px solid $black
-	margin-top: 5em
+	//border-top: 6px solid $black
+	//margin-top: 5em
+	margin: 0 auto
 
 header 
 	text-align: left 
@@ -82,6 +88,7 @@ header
 	letter-spacing: -.05em
 
 .cal-container
+	position: relative 
 	@include clearfix
 
 .cal-strokes //adds faux cols to allow for equal height strokes
