@@ -18,6 +18,7 @@
 .cal-stroke,
 .days-label--day
 	@include span-columns(1 of 7)
+	@include omega //Remove gutter
 	@include media($mobile)
 		@include span-columns(1)
 
@@ -29,8 +30,8 @@ header,
 	@include row()
 
 //Hack to fix full width Neat grid issue with gutters
-.days-label
-	margin-left: $gutter
+//.days-label
+	//margin-left: $gutter
 
 
 
@@ -108,6 +109,8 @@ header
 	border-left: 1px solid #ccc
 	&:first-child
 		border-left: 0 //removes col. stroke: makes flush with window
+	&:last-child
+		border-right: 1px solid #ccc
 
 .weeks 
 	position: relative 
@@ -139,8 +142,6 @@ header
 .days-label--day
 	text-align: center
 	font-size: 1.25em  
-	&:first-child
-		border-left: 0 //removes col. stroke: makes flush with window
 
 .genre
 	+univers 
