@@ -28,6 +28,10 @@ header,
 .cal-strokes
 	@include row()
 
+//Hack to fix full width Neat grid issue with gutters
+.days-label
+	margin-left: $gutter
+
 
 
 //------------------------------------//
@@ -134,20 +138,20 @@ header
 
 .days-label--day
 	text-align: center
-	font-size: 1.25em 
-	border-left: 1px solid #ccc
+	font-size: 1.25em  
 	&:first-child
 		border-left: 0 //removes col. stroke: makes flush with window
 
 .genre
 	+univers 
 	font-size: .8em
-	margin-left: 1.3em
+	margin-left: 1.25em
 	line-height: 1.6em
-	padding-left: 1.3em
-	background: $lc-accent-blue
+	//padding-left: 1.3em
+	//background: $lc-accent-blue
 	margin-top: 1.5em
 	margin-bottom: 1em
+	border-bottom: 1px solid #ccc
 
 .events
 	+univers-light 
@@ -156,7 +160,7 @@ header
 	line-height: 2em
 
 .days
-	@include pad(1em 0 1em 1em)
+	//@include pad(1em 0 1em 1em)
 	//background: $gray
 	//margin-top: 1em
 	padding: 1em 0
