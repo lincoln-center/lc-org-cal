@@ -85,7 +85,7 @@ p
 	position: relative //allows faux cols to expand full height with pos absolute
 	//border-top: 6px solid $black
 	//margin-top: 5em
-	margin: 0 auto
+	//margin: 0 auto
 
 header 
 	text-align: left 
@@ -95,6 +95,7 @@ header
 .cal-container
 	position: relative 
 	@include clearfix
+	margin: 0 auto
 
 .cal-strokes //adds faux cols to allow for equal height strokes
 	position: absolute
@@ -109,8 +110,8 @@ header
 	border-left: 1px solid #ccc
 	&:first-child
 		border-left: 0 //removes col. stroke: makes flush with window
-	&:last-child
-		border-right: 1px solid #ccc
+	//&:last-child
+		//border-right: 1px solid #ccc
 
 .weeks 
 	position: relative 
